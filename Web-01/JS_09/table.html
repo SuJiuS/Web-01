@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/css">
+			.s_table {
+				border: 1px solid red;
+				width: 500px;
+				height: 400px;
+				border-collapse: collapse;
+			}
+			
+			.s_table_td {
+				border: 1px solid black;
+				text-align: center;
+			}
+			
+			.s_table_tr_odd {
+			/*	background: #ada;*/
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<script src="js/s.table.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.tableHelper({
+				rows: 10,
+				cols: 10,
+				callback: function() {
+					//alert("OK")
+				}
+			});
+		</script>
+
+	</body>
+
+</html>

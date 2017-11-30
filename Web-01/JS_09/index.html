@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+
+		<a id="test2" href="http://baidu.com">百度</a>
+
+		<div id="test1" style="width: 300px;height: 300px;border: 1px solid red;">
+			<div id="test" style="width: 200px;height: 200px;border: 1px solid red;">SB</div>
+		</div>
+
+		<script src="js/eventHelper.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			var test = document.getElementById("test");
+			var test1 = document.getElementById("test1");
+
+			//var test2 = document.getElementById("test2");
+
+			//			EventHelper.add("click", test2, function(e) {
+			//			阻止默认行为				
+			//			e.preventDefault();
+			//			});
+
+			var sb = function(e) {
+				alert(1);
+				//阻止默认行为
+				e.stopPropagation();
+				//window.event.returnValue = false;
+			};
+
+			var sb1 = function() {
+				alert(2)
+			};
+
+			EventHelper.add("click", test, sb);
+
+			EventHelper.add("click", test1, sb1);
+
+			//EventHelper.remove("click", test, sb1);
+
+			//			test.attachEvent("onclick",sb)
+			//			
+			//			test.attachEvent("onclick",function(){
+			//				alert(2);
+			//			})
+			//			
+			//			test.detachEvent("onclick",sb)
+			//			test.addEventListener("click", sb, false);
+			//
+			//			test.addEventListener("click", function() {
+			//				alert(2)
+			//			}, false);
+			//
+			//			test.removeEventListener("click",sb);
+		</script>
+	</body>
+
+</html>
