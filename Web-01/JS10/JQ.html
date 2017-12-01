@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script src="../js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				$("#test").css("color", "red");
+				$(".test").css("color", "green");
+				$("div").css("color", "black");
+
+				$("div p").css("color", "red");
+
+				//				$("[name='test']").html('	<div id="test" class="test">12321313</div>');
+				//				$("[name='test']").text('	<div id="test" class="test">12321313</div>');
+
+				//	$('[action-type="del"]').html("=================");
+
+				//alert($('[action-type="del"]').html())
+				//
+				//				$('[action-type="del"]').click(function(){
+				//					alert($(this).text());
+				//				});
+				//				
+
+				//.attr("action-type", "abc")
+
+				//				function aaa() {
+				//					$("[name='test']").toggle(300);
+				//				}
+				//
+				//				$("#test1").click(aaa);
+
+				//				$("#test1").click(function() {
+				//					alert(1)
+				//				}).css({"color":"red","font-size":"19px"}).html("1111111111");
+
+				//$("#test1").addClass("aaaa").removeClass("test");
+
+				function myhtml(obj, str) {
+					if(str == "" || str == null) {
+						return obj.innerHTML ;
+					}else{
+						obj.innerHTML = str;
+					}
+				}
+
+				function myclick(obj, func) {
+					obj.onclick = func;
+					return obj;
+				}
+
+				function mycss(obj, name, value) {
+					obj.style[name] = value;
+					return obj;
+				}
+
+				var obj = document.getElementById("test1")
+
+var sss =mycss(
+					myclick(obj, function() {
+						alert(1)
+					}), "color", "red"
+				);
+
+				alert(myhtml(sss))
+
+			});
+		</script>
+
+		<div id="test1" class="test">adfsfdasfda</div>
+		<div class="test">adfsfdasfda
+			<p>asdfdsafadsfasdfdsafdas</p>
+		</div>
+
+		<div name="test" action-type="del">q4adfadsfasd
+		</div>
+		<div name="test" action-type="del">qwerqewr
+		</div>
+		<div name="test" action-type="del">qasfdasf
+		</div>
+		<div name="test" action-type="del">asdfadsf
+		</div>
+		<div name="test" action-type="del">asdfdasf
+		</div>
+		<div name="test" action-type="del">adsfdasfa
+		</div>
+
+	</body>
+
+</html>
