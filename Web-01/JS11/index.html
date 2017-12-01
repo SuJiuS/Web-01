@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				list-style: none;
+				padding: 0px;
+			}
+			
+			.mytd {
+				width: 100px;
+				height: 30px;
+				border: 1px solid red;
+			}
+			/*li:hover {
+				background: green;
+			}*/
+		</style>
+	</head>
+
+	<body>
+
+		<div style="width: 500px;height: 300px;overflow: hidden;position: relative;">
+			<div id="main" style="position: absolute;width: 1600px;height: 300px;border: 1px solid red;">
+				<img src="timg.jpg" style="width: 500px;height: 300px;" />
+				<img src="3a1ade8c33b1ef20400bbfd8fd1c6c42.jpg" style="width: 500px;height: 300px;" />
+				<img src="QQ图片20171130160355.jpg" style="width: 500px;height: 300px;" />
+			</div>
+		</div>
+
+		<button id="test">上一页</button><button id="next">下一页</button>
+
+		<div id="content" style="position: absolute;border: 1px solid red;width: 180px;">
+			<h1 id="title">个人中心</h1>
+			<ul id="list" style="width: 120px;border: 1px solid red;background: #fff;display: none;position: absolute;">
+				<li>11111111111</li>
+				<li>22222222222</li>
+				<li>33333333333</li>
+				<li>44444444444</li>
+			</ul>
+		</div>
+
+		asdfafa
+		<script src="../js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			//		
+			//		$("#test").click(function(){
+			//			$("#main").animate({"left":"+=500px"},1000);
+			//		})
+			//		
+			//		$("#next").click(function(){
+			//			$("#main").animate({"left":"-=500px"},1000);
+			//		})
+			//		
+			//		
+			//			var i = 0;
+			//			var j = 1;
+			//			var aa = 0
+			//
+			//			for(; j < 10; j++) {
+			//				setInterval(function() {}, 1000)
+			//			}
+
+			//			var table = $("<table/>").css("border", "1px solid red");
+			//
+			//			for(var i = 0; i < 10; i++) {
+			//				var tr = $("<tr/>");
+			//				table.append(tr);
+			//				for(var h = 0; h < 10; h++) {
+			//					var td = $("<td/>").addClass("mytd");
+			//					tr.append(td);
+			//				}
+			//			}
+			//
+			//			$("body").append(table);
+
+			//			$("#content").mouseenter(function() {
+			//				$("#list").show();
+			//			})
+			//
+			//			$("#content").mouseleave(function() {
+			//				$("#list").hide();
+			//			})
+
+			//取反
+			//			$("#content").hover(function() {
+			//				$("#list").toggle("fast");
+			//			})
+
+			//卷帘门
+			//			$("#content").hover(function() {
+			//				$("#list").slideToggle("slow");
+			//			})
+
+			//渐入渐出
+			//			$("#content").hover(function() {
+			//				$("#list").fadeToggle("slow");
+			//			})
+
+			//			$("#content").animate({
+			//				"left": "500px",
+			//			}, "slow");
+
+			//			var test = document.getElementById("content")
+			//			var list = document.getElementById("list")
+			//
+			//			test.onmouseenter = function() {
+			//				list.style.display = "block";
+			//			}
+			//
+			//			test.onmouseleave = function() {
+			//				list.style.display = "none";
+			//			}
+			//
+			//			list.onmouseover = function() {
+			//				list.style.color = "red";
+			//			}
+			//
+			//			list.onmouseout = function() {
+			//				list.style.color = "black";
+			//			}
+
+			//			test.onmouseover=function(){
+			//				list.style.display="block";
+			//			}
+			//			
+			//			test.onmouseout=function(){
+			//				list.style.display="none";
+			//			}
+			//			
+			//			list.onmouseover=function(){
+			//				list.style.color="red";
+			//			}
+			//			
+			//			list.onmouseout=function(){
+			//				list.style.color="black";
+			//			}
+
+			//			var sss = 5;
+			//			var a = setTimeout(function() {
+			//
+			//				for(var jjjjj = 0; jjjjj < 1000000000; jjjjj++) {
+			//					sss *= sss + jjjjj * (sss -= ++jjjjj)
+			//				}
+			//
+			//				console.log(12222)
+			//			}, 1000)
+
+			//			var a = 1;
+			//
+			//			function test() {
+			//				console.log(++a)
+			//				setTimeout(arguments.callee, 1000)
+			//			}
+			//
+			//			test();
+
+			//clearTimeout(a )
+		</script>
+
+	</body>
+
+</html>
