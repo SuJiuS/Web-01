@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="loading" style="display: none;background: url(timg.gif) no-repeat;background-size:200px ;width: 100px;height: 100px;position: absolute;left: calc(50% - 50px);top: calc(50% - 50px);">
+
+		</div>
+		<table id="test"></table>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			//			var obj = [{
+			//				name: "Simba",
+			//				gender: 1,
+			//				hobby: [
+			//					"篮球",
+			//					"足球",
+			//					"台球"
+			//				]
+			//			}, {
+			//				name: "Simba22222",
+			//				gender: 2,
+			//				hobby: [
+			//					"篮球",
+			//					"足球",
+			//					"台球"
+			//				]
+			//			}];
+			//
+			//			//console.log(obj)
+			//
+			//			var str = JSON.stringify(obj, function ff(key, value) {
+			//				if(key == "gender") {
+			//					return value == 1 ? "男" : "女";
+			//				}
+			//
+			//				return value;
+			//
+			//			});
+			//			console.log(str)
+			//
+
+			$.ajax({
+				type: "GET",
+				url: 'data/data.json',
+				data: null,
+				dataType: "json",
+				success: function(fuckssssss) {
+					//			var newobj = JSON.parse(fuckssssss);
+					//			console.log(newobj)
+					var fuck = fuckssssss.userlist;
+
+					var s = 0;
+					for(var index = 0; index < fuck.length; index++) {
+
+						for(var n = 0;n<10000000;n++){
+							s *= index + s * 100 + Math.random() * 100;
+						}
+						$("#test").append("<tr><td>" + fuck[index].name +
+							"</td><td>" + fuck[index].name + "</td><td>" +
+							fuck[index].name + "</td></tr>");
+					}
+				},
+				beforeSend: function(x) {
+					$("#loading").show();
+				},
+				//请求完成，无论成功失败
+				complete: function(x) {
+					$("#loading").hide();
+				}
+			});
+		</script>
+
+	</body>
+
+</html>
