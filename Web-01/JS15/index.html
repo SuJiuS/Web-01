@@ -8,6 +8,9 @@
 
 	<body>
 
+		<div id="test">
+			<div>123</div>
+		</div>
 		<script type="text/javascript">
 			//			var dog1 = {
 			//				name: "小芳",
@@ -89,12 +92,40 @@
 			qc.sayHello(ds);
 
 			//console.log(xf.constructor)
-			//			xf.sayFuck(ds);
-			//			dh.sayFuck(ds);
-			//			xf.eat("火锅");
-			//			qc.sayFuck(ds);
-			//			qc.eat("烧烤");
-			//			xf.goodMorning(ds);
+			//xf.sayFuck(ds);
+			//dh.sayFuck(ds);
+			//xf.eat("火锅");
+			//qc.sayFuck(ds);
+			//qc.eat("烧烤");
+			//xf.goodMorning(ds);
+
+			//			String.prototype.trimLeft = function() {
+			//				var arr = this.split('');
+			//				for(var i = 0; i < arr.length; i++) {
+			//					if(arr[i] == " ") {
+			//						arr[i] = ""
+			//					} else
+			//						break;
+			//				}
+			//
+			//				return arr.join('');
+			//			}
+			//
+			//			var str = "       Sim  ba   ";
+			//			console.log(str);
+			//			console.log(str.trimLeft());
+
+			//			function firstChild(node) {
+			//				return node.firstElementChild|| node.firstChild;
+			//			}
+
+			var doc = document.getElementById("test")
+
+			HTMLElement.prototype.myfirstChild = function() {
+				return this.firstElementChild || this.firstChild;
+			}
+
+			alert(doc.myfirstChild().innerHTML)
 		</script>
 
 	</body>
