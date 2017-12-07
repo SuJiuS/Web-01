@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+			//			var dog1 = {
+			//				name: "小芳",
+			//				type: "金毛",
+			//				age: 3,
+			//				gender: '雄',
+			//				sayHello: function(name) {
+			//					console.log(dog1.name + "说," + name + "你好。");
+			//				}
+			//			}
+			//
+			//			dog1.sayHello("大顺");
+			//
+			//			var dog2 = new Object();
+			//			dog2.name = "小芳2";
+			//			dog2.type = "萨摩";
+			//			dog2.sayHello = function(name) {
+			//				console.log(dog2.name + "说," + name + "你好。");
+			//			}
+			//			
+			//			dog2.sayHello("大顺")
+
+			//			function createDog(name, type) {
+			//				var dog = new Object();
+			//				dog.name = name;
+			//				dog.type = type;
+			//				dog.sayHello = function(name) {
+			//					console.log(dog.name + "说," + name + "你好。");
+			//				}
+			//
+			//				return dog;
+			//			}
+			//
+			//			createDog("格瓦拉", "约克夏").sayHello("大顺");
+
+			function Dog(name, type) {
+				//this.name = name;
+				this.type = type;
+				//this.sayHello = sayHello;
+
+				if(!this.eat || (typeof this.eat != "function")) {
+					Dog.prototype.eat = function(name) {
+						console.log(this.name + "说,我要吃" + name + "。");
+					}
+				}
+
+				if(!this.sayHello) {
+					console.log(1)
+					Dog.prototype.sayHello = function(name) {
+						console.log(this.name + "说," + name + "你好。");
+					}
+				}
+			}
+
+			Dog.prototype.name = "Ace";
+
+			const ds = "大顺";
+
+			//			Dog.prototype = {
+			//				sayFuck: function(name) {
+			//					console.log(this.name + "说," + name + "DB。");
+			//				},
+			//				goodMorning: function(name) {
+			//					console.log(this.name + "说," + name + ",GM。");
+			//				}
+			//			}
+
+			var xf = new Dog("小芳", "德牧");
+			xf.sayHello(ds);
+
+			//xf.name = "Roger";
+
+			xf.sayHello(ds);
+
+			var dh = new Dog("大黄", "阿拉斯加");
+			dh.sayHello(ds);
+
+			var qc = new Dog("小琪", "阿拉斯加");
+			qc.sayHello(ds);
+
+			//console.log(xf.constructor)
+			//			xf.sayFuck(ds);
+			//			dh.sayFuck(ds);
+			//			xf.eat("火锅");
+			//			qc.sayFuck(ds);
+			//			qc.eat("烧烤");
+			//			xf.goodMorning(ds);
+		</script>
+
+	</body>
+
+</html>
