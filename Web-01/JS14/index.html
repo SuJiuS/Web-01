@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<div id="test">
+			asasdfdasfdas
+		</div>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			//挂在$上
+			$.extend({
+				common: {}
+			});
+
+			$.extend($.common, {
+				ajax: function() {},
+			});
+
+			//挂在选择器对象上
+			$.fn.extend({
+				upperCaseFirstChar: function() {
+					var str = $(this).text().trim();
+					str = str.substr(0, 1).toUpperCase() + str.substr(1);
+					return str;
+				}
+			});
+
+			var str = $("#test").upperCaseFirstChar();
+			$("#test").text(str);
+			//alert(str)
+		</script>
+
+	</body>
+
+</html>
