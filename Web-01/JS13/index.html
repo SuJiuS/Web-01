@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css" />
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			list-style-type: none;
+			cursor: pointer;
+			color: #999;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		a:hover {
+			background-color: palevioletred;
+		}
+		
+		.type_item {
+			float: left;
+			line-height: 30px;
+			font-size: 14px;
+			width: 60px;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<div style="width: 100%; background-color: #EEF3FA;">
+			<div style="width: 950px; height: 1200px;margin: 0px auto; background-color: #fff;">
+				<ul style="overflow: hidden;">
+					<li style="float: left;width: 158px;background-color: #ED0A75; border-bottom: 2px solid #ED0A75; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+						<a href="javascript:;" style=" color: #fff;">全部商品分类</a>
+					</li>
+					<li style="float: left;width: 158px; border-bottom: 2px solid #ED0A75; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+						<a href="javascript:;" style="color: #999">首页</a>
+					</li>
+					<li style="float: left;width: 158px; border-bottom: 2px solid #ED0A75; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+						<a href="javascript:;" style="color: #999">摇滚</a>
+					</li>
+					<li style="float: left;width: 158px; border-bottom: 2px solid #ED0A75; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+						<a href="javascript:;" style="color: #999">戏剧</a>
+					</li>
+					<li style="float: left;width: 158px; border-bottom: 2px solid #ED0A75; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+						<a href="javascript:;" style="color: #999">亲子</a>
+					</li>
+					<li style="float: left;width: 158px; border-bottom: 2px solid #ED0A75; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+						<a href="javascript:;" style="color: #999">古典舞蹈</a>
+					</li>
+				</ul>
+				<div style="color: #666666; font-size: 14px;margin-top: 15px;">共<span style="color: #ED0A75;">13</span>个商品</div>
+				<div style="width: 948px; height: 265px; border: 1px dotted #D9D9D9;margin-top: 15px;">
+					<div style="width: 900px; height: 80px; border-bottom: 1px dotted #D9D9D9;overflow: hidden;margin: 0px 20px;">
+						<div style="float: left;height: 50px; width: 100px;line-height: 50px; text-align: right; color: darkgray;">城市:</div>
+						<div style="float: left; width: 700px; margin-top: 10px;">
+							<div style="float: left;margin-top:7px;margin-left: 40px; font-size: 14px;height: 40px;">全部</div>
+							<ul id="citys">
+
+							</ul>
+						</div>
+
+						<div style="float: right;">更多</div>
+					</div>
+
+					<div style="width: 900px; height: 80px; border-bottom: 1px dotted #D9D9D9;overflow: hidden;margin: 0px 20px;">
+						<div style="float: left;height: 50px; width: 100px;line-height: 50px; text-align: right; color: darkgray;">城市:</div>
+						<div style="float: left; width: 700px; margin-top: 10px;">
+							<div style="float: left;margin-top:7px;margin-left: 40px; font-size: 14px;height: 40px;">全部</div>
+							<ul>
+
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">话剧歌剧</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">音乐会</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px;background-color: #ED0A75; width: 90px; text-align: center;">
+									<a href="javascript:;" style=" color: #fff;font-size: 14px; ">演唱会</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">曲苑杂谈</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">舞蹈芭蕾</a>
+								</li>
+
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">度假休闲</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">体育比赛</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">电影优惠卷</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">儿童亲子</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">动漫</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">旅游展览</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">旅游演艺</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style="color: #999;font-size: 14px; ">韩流地带</a>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+
+					<div style="width: 900px; height: 50px; border-bottom: 1px dotted #D9D9D9;overflow: hidden;margin: 0px 20px;">
+						<div style="float: left;height: 50px; width: 100px;line-height: 50px; text-align: right; color: darkgray;">城市:</div>
+						<div style="float: left; width: 700px; margin-top: 10px;">
+							<div style="margin-left: 30px;float: left; font-size: 14px;height: 30px;color: #fff;font-size: 14px;  width: 54px; text-align: center;line-height: 30px;background-color: #ED0A75;">全部</div>
+							<ul id="types">
+
+							</ul>
+						</div>
+
+					</div>
+
+					<div style="width: 900px; height: 50px;overflow: hidden;margin: 0px 20px;">
+						<div style="float: left;height: 50px; width: 100px;line-height: 50px; text-align: right; color: darkgray;">城市:</div>
+						<div style="float: left; width: 780px; margin-top: 10px;">
+							<div style="margin-left: 30px;float: left; font-size: 14px;height: 30px;color: #fff;font-size: 14px;  width: 54px; text-align: center;line-height: 30px;background-color: #ED0A75;">全部</div>
+							<ul>
+
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 60px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">今天</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 60px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">明天</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 60px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">本周</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 90px; text-align: center;">
+									<a href="javascript:;" style=" color: #999; font-size: 14px;">一个月内</a>
+								</li>
+								<li style="float: left;line-height: 30px;font-size: 14px; width: 380px; ">
+									<a href="javascript:;" style="color: #999;font-size: 14px; float: left;">按时间段：</a>
+									<div>
+										<div style="float:left;border: 1px solid gainsboro; width: 80px;margin: 0px; padding: 0px;"><input style="width: 50px;border: none;"><i style="color: gainsboro;" class="fa fa-calendar" aria-hidden="true"></i> </div>
+										<div style="float:left;">&nbsp;-&nbsp;</div>
+										<div style="float:left;border: 1px solid gainsboro; width: 80px;margin: 0px; padding: 0px;"><input style="width: 50px;border: none;"><i style="color: gainsboro;" class="fa fa-calendar" aria-hidden="true"></i> </div>
+										<div style="margin-left: 20px; float: left;"><i style="color: #ED0A75;" class="fa fa-calendar" aria-hidden="true"></i>&nbsp;按日历</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div id="infos" style="border-top: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9;border-right: 1px dotted #D9D9D9; height: 40px; width: 940px;margin-top: 20px;">
+						<ul style="overflow: hidden;">
+							<li style="float: left;width: 120px; height: 20px; text-align: center;height: 40px;line-height: 40px;border-bottom: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9;border-right: 1px dotted #D9D9D9;">
+								<a href="javascript:;" style=" color: #999#999;">相关排序</a>
+							</li>
+							<li style="float: left;width: 120px; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+								<a href="javascript:;" style="color: #ED0A75">推荐排序</a>
+							</li>
+							<li style="float: left;width: 120px;height: 20px;border-bottom: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9; text-align: center;height: 40px;line-height: 40px;">
+								<a href="javascript:;" style="color: #999">最近开场</a>
+							</li>
+							<li style="float: left;width: 120px;border-bottom: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+								<a href="javascript:;" style="color: #999">最新上架</a>
+							</li>
+							<li style="float: left;width: 240px;border-bottom: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+								<a href="javascript:;" style="color: #999"></a>
+							</li>
+							<li style="float: left;width: 50px; height: 20px; text-align: center;height: 40px;line-height: 40px;background-color: #ED0A75;">
+								<a href="javascript:;"><i style="color: #fff" class="fa fa-list" aria-hidden="true"></i> </a>
+							</li>
+							<li style="float: left;width: 50px;border-bottom: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+								<a href="javascript:;"><i style="color: #999" class="fa fa-th-large" aria-hidden="true"></i></a>
+							</li>
+							<li style="float: left;width: 110px;border-bottom: 1px dotted #D9D9D9;border-left: 1px dotted #D9D9D9; height: 20px; text-align: center;height: 40px;line-height: 40px;">
+								<a href="javascript:;" style="color: #999">
+									<1-1>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="loading" style="display: none;width: 100%;height: calc(100%);background: grey;opacity: 0.9;position: absolute;left: 0px;top: 0px;">
+			<div style="position: absolute;top: calc(50% - 100px);left: calc(50% - 100px);background: url(img/loading.gif) no-repeat;background-size:200px ;width: 200px;height: 200px;">
+
+			</div>
+		</div>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function getInfo(mid) {
+
+				$.simba.ajax({
+					url: 'data/info.json',
+					success: function(fuck) {
+						if(fuck) {
+
+							$("#infos").empty();
+
+							var m1 = fuck.infolist || [];
+
+							if(mid) {
+								m1 = m1.filter(function(item) {
+									return item.mid == mid;
+								});
+							}
+
+							var a = 10
+							for(let i = 0; i < 8000000; i++) {
+								a *= a++ * (a * i * Math.PI * Math.cos(i * a));
+							}
+
+							for(let i = 0; i < m1.length; i++) {
+								var is = m1[i];
+
+								var str = `
+							<div style="margin-top: 50px;overflow: hidden;border-bottom: 1px dotted gainsboro; height: 220px;">
+						<div style="float: left;margin-left: 20px;"><img style="width: 150px; height: 200px;" src="img/${is.img}" /></div>
+						<div style="float: left;width: 500px; height: 200px;margin-left: 20px;">
+							<div style="height: 30px; line-height: 30px;">${is.title}</div>
+							<div style="height: 30px; line-height: 30px;">${is.ido}</div>
+							<div style="height: 30px; line-height: 30px;"><i style="color:#ED0A75 ;" class="fa fa-calendar-o" aria-hidden="true"></i>${is.date}</div>
+							<div style="height: 30px; line-height: 30px;"><i style="color: #ED0A75;" class="fa fa-map-marker" aria-hidden="true"></i>${is.address}</div>
+							<div style="color: #ED0A75;height: 30px; line-height: 30px;">${is.price} ${is.status==0?"未开票":is.status==1?"售票中":"售罄"}</div>
+						</div>
+
+					</div>
+							
+							`;
+
+								$("#infos").append(str);
+							}
+
+						}
+					}
+				});
+
+			}
+
+			$(function() {
+
+				getInfo();
+
+				$.simba.ajax({
+					url: 'data/menu.json',
+					success: function(fuck) {
+						if(fuck) {
+							var m1 = fuck.menu1 || [];
+							var str1 = ""
+							for(let i = 0; i < m1.length; i++) {
+								str1 += ('<li style="float: left;line-height: 30px;' +
+									'font-size: 14px; width:60px; text-align: center;">' +
+									'<a href="javascript:getInfo(' + m1[i].mid + ');" style="color: #999  ;font-size: 14px;">' + m1[i].name + '</a>' +
+									'</li>');
+							}
+
+							$("#citys").append(str1);
+
+							var m2 = fuck.menu2 || [];
+
+							var tempdiv = $("<div/>")
+
+							for(let i = 0; i < m2.length; i++) {
+								var aaa = $("<a/>").attr("href", "javascript:getInfo(" + m2[i].mid + ")").text(m2[i].name).css("color", "#999").css(" font-size", "14px");
+								var li = $("<li/>").addClass("type_item").append(aaa);
+
+								tempdiv.append(li)
+							}
+
+							$("#types").append(tempdiv.html())
+
+						}
+					}
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>
