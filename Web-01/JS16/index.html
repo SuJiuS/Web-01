@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const ds = "大顺";
+
+        function Flower(name, type) {
+            this.name = name;
+            this.type = type;
+            this.address = ["广东", "可可西里"];
+        }
+
+        Flower.prototype.sayHello = function (name) {
+            console.log("出生于" + this.address + "的" + this.type + "-" + this.name + "说,早呀" + name);
+        }
+
+        // var f1 =;
+        // f1.sayHello(ds);
+
+        function Rose(name, type) {
+            //Flower.call(this,name,"月季",xxxx,xx,xx);
+            Flower.apply(this, arguments)
+            this.name = name;
+        }
+
+        Rose.prototype = new Flower();
+
+        let r1 = new Rose("蓝色妖姬", "康乃馨0");
+        //给r1自己设置实例属性
+        // r1.type = "康乃馨";
+        //拿到原型对象的属性
+        r1.address.push("西双版纳");
+        // r1.sayHello(ds);
+
+        let r2 = new Rose("紫色妖姬", "康乃馨2");
+        //  r2.type = "百合";
+        //r2.sayHello(ds);
+
+        // f1.sayHello(ds);
+
+
+function obj(obj1){
+    new obj().prototype =obj1;
+    return 
+}
+
+    </script>
+</body>
+
+</html>

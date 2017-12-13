@@ -1,0 +1,17 @@
+{
+  "name": "simba",
+  "version": "1.0.0",
+  "description": "发大水发送",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "jpg": "^0.0.1",
+    "mysql": "^2.15.0"
+  }
+}
