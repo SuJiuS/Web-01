@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="name">
+
+    <table>
+        <tr>
+            <th>昵称</th>
+            <th>签名</th>
+            <th>用户ID</th>
+        </tr>
+        <tbody id="test">
+
+        </tbody>
+
+    </table>
+    <script src="js/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+
+
+            $("#name").blur(function () {
+                getlist({name:$(this).val()})
+            });
+
+            getlist()
+        })
+
+        function getlist(data) {
+            $.ajax({
+                url: '/user',
+                data: data,
+                type: "GET",
+                cache:'false',
+                success: function (d) {
+                    if (d) {
+                        $("#test").html('')
+
+                        for (let i = 0; i < d.length; i++) {
+                            $("#test").append(`
+                             <tr>
+                                <td>${d[i].nickname}</td>
+                                <td>${d[i].motto}</td>
+                                <td>${d[i].userid}</td>
+                            </tr>
+                             `)
+                        }
+                    }
+                }
+            })
+        }
+    </script>
+
+</body>
+
+</html>
