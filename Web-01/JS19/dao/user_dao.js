@@ -20,7 +20,13 @@ result.getUserList = function (callback) {
 
 
 result.getUserListByName = function (name, callback) {
-    conn.query('SELECT * FROM USER_BASE where nickname like "%' + name + '%"', function (err, result, fields) {
+
+    name = "%" + name + "%"
+
+    conn.query('SELECT * FROM USER_BASE where nickname like ?', name,
+    
+    
+    function (err, result, fields) {
         if (err) console.log("数据库错误：" + err)
         callback(result)
     })
