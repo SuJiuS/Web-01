@@ -3,26 +3,29 @@ let userdao = require('../dao/user_dao')
 
 
 router.get('/', function (req, res) {
-    // console.log(req.query.name)
-    userdao.getUsers(function (data) {
-        res.send(data)
+    res.send(req.query.name)
+})
+
+router.post('/addJudge', function (req, res) {
+    userdao.addJudge(req.body.content, function (data) {
+        res.send({result:data})
     })
 })
 
-router.get('/login', function (req, res) {
-    userdao.getUserByNameAndPwd([
-        req.query.username,
-        req.query.pwd
-    ], function (data) {
-        res.send(data[0])
-    })
+router.get('/judges', function (req, res) {
+    userdao.getJudgeList(function(num){
+        res.json(num);
+    }) 
 })
+    
+
+
 
 router.post('/login', function (req, res) {
 
-    userdao.getUserByNameAndPwd([
-        req.query.username,
-        req.query.pwd
+    userdao.login([
+        req.body.username,
+        req.body.pwd
     ], function (data) {
         res.send(data[0])
     })
