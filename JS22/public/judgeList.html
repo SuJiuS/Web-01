@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+	<meta charset="UTF-8">
+	<title>第一次意见簿</title>
+	<link rel="stylesheet" type="text/css" href="jstickynote/css/style.css" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body style="height: 100%;">
+	<div id="content" style="height:100%;width:100%;background:url(jstickynote/images/bg.png)">
+
+	</div>
+	<script src="jstickynote/jquery-1.3.2.js"></script>
+	<script src="jstickynote/jquery.stickynote.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="jstickynote/ui.core.js"></script>
+	<script type="text/javascript" src="jstickynote/ui.draggable.js"></script>
+
+	<script type="text/javascript">
+
+
+
+
+		//显示标签
+		$(function () {
+
+			$.ajax({
+				type: "get",
+				url: "/user/judges",
+				dataType:'json',
+				success: function (d) {
+					for (var i = 0; i < d.length; i++) {
+						$.fn.stickynote.createNote({
+							size: 'large',
+							top: (document.body.offsetHeight - 230) * Math.random(),
+							left: (document.body.offsetWidth - 230) * Math.random(),
+							text: d[i].content,
+							color: 'black',
+							containment: 'content',
+							ontop: true
+						});
+					}
+				}
+			});
+		})
+	</script>
+</body>
+
+</html>

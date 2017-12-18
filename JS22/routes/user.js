@@ -1,14 +1,12 @@
 let router = require('express').Router()
-let userdao = require('../dao/user_dao')
+let userdao = require('../models/dao/user_dao')
 
-//   /user/detail
-router.get('/detail', function (req, res) {
-    res.send(req.query.name)
-})
 
-//   /user/index
-router.get('/index', function (req, res) {
-    res.send(req.query.name)
+//用户列表
+router.get('/list', function (req, res) {
+    userdao.list(function (data) {
+        res.json(data)
+    })
 })
 
 router.post('/addJudge', function (req, res) {

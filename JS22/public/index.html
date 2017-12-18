@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+
+        .left_navs {
+            background: deepskyblue;
+            color: #fff;
+        }
+
+        .left_navs li {
+            height: auto;
+            min-height: 30px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .left_navs li:hover {
+            background: lightskyblue;
+        }
+
+        .left_navs_curr {
+            background: lightskyblue;
+        }
+
+        .left_sub_navs {
+            background: #fff;
+            color: skyblue;
+            display: none;
+        }
+
+        .list_table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .list_table tr:hover {
+            background: skyblue;
+            cursor: pointer;
+        }
+
+        .list_table th,
+        .list_table td {
+            border: 1px solid darkgrey;
+            text-align: center;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body style="height: 100%;">
+    <div style="width: 100%;height: 70px;background: #029BE2;">
+
+    </div>
+
+    <div style="width: 100%;height: calc(100% - 70px);overflow: hidden;">
+        <ul class="left_navs" style="float: left;width: 140px;height: 100%;">
+            <li>
+                <div class="left_navs_title">
+                    学生管理
+                </div>
+                <div class="left_sub_navs">
+                    <div action-name="userlist">用户列表</div>
+                    <div>新增学生</div>
+                    <div>学生统计</div>
+                </div>
+            </li>
+            <li>
+                <div class="left_navs_title">
+                    班级管理
+                </div>
+                <div class="left_sub_navs">
+                    <div action-name="classlist">班级列表</div>
+                    <div>2222</div>
+                    <div>3333</div>
+                    <div>4444</div>
+                    <div>5555</div>
+                </div>
+            </li>
+            <li>学生管理</li>
+            <li>学生管理</li>
+            <li>学生管理</li>
+            <li>学生管理</li>
+            <li>学生管理</li>
+        </ul>
+        <div id="maincontent" style="float: right;width: calc(100% - 140px);height: 100%;">
+        </div>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/web01.common.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.index.init();
+        })
+    </script>
+
+</body>
+
+</html>

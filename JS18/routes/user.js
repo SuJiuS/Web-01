@@ -8,6 +8,14 @@ router.get('/list', function (req, res) {
     })
 })
 
+
+router.post('/list/:pageindex/:pagesize',function(){
+   // req.params.pageindex
+   //req.params.pagesize
+})
+
+
+
 router.get('/detail', function (req, res) {
 //get  req.query.id
 //post  req.body.id

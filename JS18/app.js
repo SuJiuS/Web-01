@@ -11,7 +11,6 @@ app.use("/simba",express.static("public"))
 //设置模板引擎为jade
 app.set('view engine', 'jade');
 
-
 app.use('/user',user)
 
 // app.get("/", function (req, res) {
