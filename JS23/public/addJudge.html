@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>写留言</title>
+</head>
+
+<body>
+	<textarea name="textarea" cols="50" rows="8" placeholder="请输入文本" id="addtext"></textarea>
+	<input type="button" value="新增" id="add" />
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("#add").click(function () {
+			$.ajax({
+				type: "post",
+				url: "/user/addJudge",
+				data: { content: $("#addtext").val() },
+				success: function (d) {
+					alert(d.resultc)
+				}
+			});
+		})
+
+	</script>
+</body>
+
+</html>

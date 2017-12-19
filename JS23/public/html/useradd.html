@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/common.css">
+<div class="main" style="width:400px">
+    <div id="login_result_msg" style="color:red">
+    </div>
+    <div style="margin:10px">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" />
+        <label id="username_msg" style="color:red"></label>
+    </div>
+    <div style="margin:10px">
+        <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;密码：</label>
+        <input type="password" id="password" />
+        <label id="password_msg" style="color:red"></label>
+    </div>
+
+    <div style="margin:10px">
+        <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;昵称：</label>
+        <input type="text" id="nickname" />
+        <label id="nickname_msg" style="color:red"></label>
+    </div>
+    <div>
+        <div class="btn" id="login_btn">保存</div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+       $.user.init();
+    })
+</script>
